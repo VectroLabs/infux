@@ -70,3 +70,21 @@ func (c *Cache) Delete(key string) {
 	defer shard.mu.Unlock()
 	delete(shard.items, key)
 }
+
+// Len returns the total number of items in the cache.
+func (c *Cache) Len() int {
+	total := 0
+	for _, shard := range c.shards {
+		shard.mu.RLock()
+		total += len(shard.items)
+		shard.mu.RUnlock()
+	}
+	return total
+}
+
+// Has checks if a key exists in the cache.
+func (c *Cache) Has(key string) bool {
+	_, found := c.Get(key)
+	return found
+}
+
