@@ -1,3 +1,3 @@
-module github.com/vgoxlabs/infux
+module github.com/VectroLabs/infux
 
 go 1.21.13
