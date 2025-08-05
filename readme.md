@@ -29,7 +29,7 @@ To start using `infux` in your Go project, follow these simple steps.
 First, you need to fetch the library using `go get`:
 
 ```bash
-go get github.com/vgoxlabs/infux
+go get github.com/VectroLabs/infux
 ```
 
 ### Basic Usage
@@ -41,7 +41,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/vgoxlabs/infux"
+	"github.com/VectroLabs/infux"
 )
 
 func main() {
@@ -143,5 +143,5 @@ Contributions are welcome\! If you have suggestions for improvements, new featur
 -----
 
 <p align="center">
-Made with ❤️ by VgoxLabs
+Made with ❤️ by VectroLabs
 </p>
